@@ -1,8 +1,12 @@
 
-![Logo](https://imgur.com/VE1nWC7.png)
+# Site of Limb Minecraft Server
+![Logo](media/logo.png)
+___
+https://minecraft-server-limb.github.io
+___
 
 
-# FQQD's MCServer Website Template 1.0
+# Based on FQQD's MCServer Website Template 1.0
 
 A template for a modern looking website to promote your Minecraft server.
 
@@ -77,7 +81,8 @@ You can use and edit the website as much as you want, as long as the "Made by FQ
 ![App Screenshot](https://imgur.com/8ic4MS7.png)
 ## Authors
 
-- [@FQQD](https://fqqd.de)
+- [@Tengo](https://github.com/minecraft-server-limb)
+- Based on [@FQQD](https://fqqd.de)
 - Originally made for [@HerrFisch](https://www.github.com/HerrFisch)
 
 
