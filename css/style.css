@@ -23,6 +23,12 @@ body {
     margin: 0;
 }
 
+h1{
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    font-style: italic;
+}
+
 li {
     padding: 6px;
 }
@@ -670,7 +676,6 @@ li {
 .main3_join_div {
     display: flex;
     flex-direction: column;
-    width: 20rem;
     height: 8rem;
     background-color: var(--background2);
     border-radius: var(--roundness);

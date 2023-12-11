@@ -25,7 +25,7 @@ function mobile_navbar_link_hider() {
 
 function copyText() {
     navigator.clipboard.writeText
-    ("51.195.181.115:25621");
+    ("limb.mc-shock.com");
 }
 
 $(document).ready(function () {

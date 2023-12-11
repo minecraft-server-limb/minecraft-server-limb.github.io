@@ -1,10 +1,16 @@
-
 # Site of Limb Minecraft Server
+
 ![Logo](media/logo.png)
+
+Our Minecraft server stands out from the others because it has a plugin for issuing random items - **Random Item Giver
+Data Pack**. All other blocks in the world are initially removed. Therefore, all blocks in the world are placed by the
+players themselves. It resembles skyblock, but all players spawn in the same place. There are no private areas; everyone
+builds as they wish. Upon entering the world, you'll receive a random item every 10 seconds. This item can be anything
+except command blocks. Sounds simple, but do you anticipate the consequences? Spawn Eggs for the Warden? A Ender
+Dragon's head? Yes, every player has them. But try exchanging regular diorite for at least a half-stack...
 ___
 https://minecraft-server-limb.github.io
 ___
-
 
 # Based on FQQD's MCServer Website Template 1.0
 
@@ -13,7 +19,6 @@ A template for a modern looking website to promote your Minecraft server.
 Written with HTML and a lot of CSS and the minimal usage of JavaScript.
 
 Test it out: https://fqqd.github.io/MCServer-Web-Template/index.html
-
 
 ## Features
 
@@ -27,17 +32,16 @@ Test it out: https://fqqd.github.io/MCServer-Web-Template/index.html
 - Simple Configuration
 - Hover animations
 
-
 ## FAQ
 
 #### How do I personalize this website?
 
-To edit this website, simply fork the repository and edit the "index.html" and the "style.css" in the "media" folder. 
+To edit this website, simply fork the repository and edit the "index.html" and the "style.css" in the "media" folder.
 Reading through the code should be enough to understand what you are able to edit.
 
 #### How do I make the Discord Embed work?
 
--  Go to Discord Server Settings
+- Go to Discord Server Settings
 - "Widget"
 - Enable Server Widget
 - Select an Invite Channel (e.g. the main chat)
@@ -46,7 +50,8 @@ Reading through the code should be enough to understand what you are able to edi
 
 #### Where can I host this website?
 
-I recommend hosting the website on your own Linux VServer with Caddyserver, but if you need to have a free hosting service, I recommend Neocities or GitHub Pages.
+I recommend hosting the website on your own Linux VServer with Caddyserver, but if you need to have a free hosting
+service, I recommend Neocities or GitHub Pages.
 
 #### Why would I need such a website?
 
@@ -54,40 +59,37 @@ This website can help to provide additional information about your Minecraft Ser
 
 #### Can I use this freely without copyright?
 
-You can use and edit the website as much as you want, as long as the "Made by FQQD 2023" stays on the bottom of the site unchanged.
+You can use and edit the website as much as you want, as long as the "Made by FQQD 2023" stays on the bottom of the site
+unchanged.
 
 ## Screenshots
 
 ![App Screenshot](https://imgur.com/zOqKk56.png)
 
-
 ![App Screenshot](https://imgur.com/Th7NzCh.png)
-
 
 ![App Screenshot](https://imgur.com/dhUnvAK.png)
 
-
 ![App Screenshot](https://imgur.com/hgX2Ztd.png)
-
 
 ![App Screenshot](https://imgur.com/aSpvshJ.png)
 
-
 ![App Screenshot](https://imgur.com/v01GJAw.png)
-
 
 ## Usage/Examples
 
 ![App Screenshot](https://imgur.com/8ic4MS7.png)
+
 ## Authors
 
 - [@Tengo](https://github.com/minecraft-server-limb)
 - Based on [@FQQD](https://fqqd.de)
 - Originally made for [@HerrFisch](https://www.github.com/HerrFisch)
 
-
 ## Lastly...
+
 If you have any further question or want to help and contribute, the best ways to do this are
+
 - Creating an [issue report](https://github.com/FQQD/MCServer-Web-Template/issues)
 - Joining [my discord](https://dc.fqqd.de) and asking for help
 
