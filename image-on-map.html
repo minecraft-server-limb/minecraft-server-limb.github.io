@@ -47,14 +47,14 @@
 
     <div class="main5">
         <br>
-        <a class="headline">ImageOnMap</a>
+        <a class="headline">ImageFrame</a>
         <div class="main5_admin_div">
             <div class="main5_admins_div main5_admins_dev_type2">
                 <img class="main5_admins_img" alt="Feature Image" src="media/ImageOnMap.jpg">
                 <div class="main5_admins_description_div">
                     <a class="main5_admins_description_rank main5_admins_description_rank_owner"
-                       href="https://www.spigotmc.org/resources/imageonmap.26585/">ImageOnMap</a>
-                    <p class="main5_admins_description">ImageOnMap allows you to load a picture from the Internet to a
+                       href="https://www.spigotmc.org/resources/imageframe-load-images-on-maps-item-frames-support-gifs-map-markers-survival-friendly.106031/">ImageFrame</a>
+                    <p class="main5_admins_description">ImageFrame allows you to load a picture from the Internet to a
                         Minecraft map.</p>
                 </div>
             </div>
@@ -64,148 +64,121 @@
                         Plugin description</p>
                     <ul>
                         <li>
-                            Loads an image from a URL onto a map. PNG, JPEG and GIF are supported.
+                            Loads an image from a URL into a map. PNG, JPEG, WEBP and GIF are supported.
                         </li>
                         <li>
-                            These images will be saved on our server.
+                            Get them in Map form or directly on Item Frames! (Select your Item Frames with the smart
+                            selection tool!)
                         </li>
                         <li>
-                            Big pictures will be cut automatically into several parts! As example, a 1024x1024 picture
-                            will be cut in 16 maps.
+                            Automatic image fitting means your images won't be stretched!
                         </li>
                         <li>
                             Your image will be centered.
                         </li>
                         <li>
+                            Images will be animated if they are GIFs. Animated up to 1/20 of a second. Animation tasks
+                            run asynchronously
+                        </li>
+                        <li>
+                            Have your image span across multiple maps. Automatic image fitting works across all sizes
+                            too.
+                        </li>
+                        <li>
                             You can put your map in an item frame.
                         </li>
                     </ul>
-                    <h4>Quick guide</h4>
+                    <br>
 
-                    <ol>
-                        <li>
-                            Ensure that you have a free slot in your inventory, as ImageOnMap will give you a map.
-                        </li>
-                        <li>
-                            Type <span class="formatted">/tomap</span> URL, where URL is a link to the picture you want
-                            to render (see the
-                            section
-                            below).
-                        </li>
-                        <li>
-                            Enjoy your picture! You can place it in an item frame to make a nice poster if you want.
-                        </li>
-                    </ol>
-
-                    <span style="font-size: 22px"><b>Commands and Permissions</b></span><br>
-                    <br>
-                    <span class="formatted">
-                        <span><b>/tomap &lt;url&gt;</b></span>
-                    </span>
-                    <br>
-                    Renders an image and gives a map to the player with it.<br>
+                    <h4>Commands list</h4>
                     <ul>
-                        <li>This command can only be used by a player.</li>
-                        <li>The link must be complete, do not forget that the chat limit is 240 characters.</li>
-                        <li>You can use an URL shortener like tinyURL or bitly.</li>
-                        <li>If you want a picture in one map, type <span
-                                class="formatted"><b>resize</b></span>
-                            after the link.
-                            <ul>
-                                <li>If you want to resize to mulIf you want to resize to multiple maps, add the width
-                                    and height after <span
-                                            class="formatted">resize</span>: e.g. <span
-                                            class="formatted">/tomap url resize 2 4</span>
-                                </li>
-                                <li><span class="formatted"><span>
-                                    You can change the scaling method by replacing the 
-                                    <span class="formatted">resize</span> keyword in the 
-                                    <span class="formatted">/tomap</span> command by:</span>
-                                </span>
-                                    <ul>
-                                        <li>
-                                            <span class="formatted"><span>
-                                            <span class="formatted">resize-stretched</span>
-                                            to stretch the image to the surface (the image could be distorted); or</span>
-                                        </span>
-                                        </li>
-                                        <li><span class="formatted"><span
-                                        ><span class="formatted">resize-covered</span>
-                                            to ensure the image covers the whole surface (the image will never be distorted, but some parts may be lost near the borders).</span></span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>Permission: <span class="formatted">imageonmap.new</span> (or <span
-                                class="formatted">imageonmap.userender</span>—legacy, but will be
-                            kept in the plugin).
-                        </li>
-                    </ul>
-                    <br>
-                    <span class="formatted"><span><b>/maps</b></span></span><br>
-                    Opens a GUI to see, retrieve and manage the user's maps.<br>
-                    <ul>
-                        <li>This command can only be used by a player.</li>
-                        <li>Opens a GUI listing all the maps in a paginated view.</li>
-                        <li>A book is displayed too to see some usage statistics (maps created, quotas).</li>
-                        <li>A user can retrieve a map by left-clicking it, or manage it by right-clicking.</li>
-                        <li>Maps can be renamed (for organization), deleted (but they won't render in-game
-                            anymore!), or partially retrieved (for posters maps containing more than one map).
-                        </li>
-                        <li>Permission: <span class="formatted">imageonmap.list</span>, plus <span
-                                class="formatted">imageonmap.get</span>, <span
-                                class="formatted">imageonmap.rename</span> and <span
-                                class="formatted">imageonmap.delete</span> for actions into the
-                            GUI.
-                        </li>
-                    </ul>
-                    <br>
-                    <span class="formatted"><b><span>/maptool &lt;new|list|get|delete|explore|migrate&gt;</span></b></span><br>
-                    Main command to manage the maps. The less used in everyday usage, too.<br>
-                    <ul>
-                        <li>The commands names are pretty obvious.</li>
-                        <li><span class="formatted">/maptool new</span> is an alias of <span
-                                class="formatted">/tomap</span>.
-                        </li>
-                        <li><span class="formatted">/maptool explore</span> is an alias of <span
-                                class="formatted">/maps</span>.
-                        </li>
-                        <li><span class="formatted">/maptool migrate</span> migrates the old maps
-                            when you upgrade from IoM &lt;= 2.7 to IoM 3.0. <b>You HAVE TO execute this command to
-                                retrieve all maps when you do such a migration.</b></li>
-                        <li>Permissions:
-                            <ul>
-                                <li><span class="formatted">imageonmap.new</span> for <span
-                                        class="formatted">/maptool new</span>;
-                                </li>
-                                <li><span class="formatted">imageonmap.li</span>st for both
-                                    /maptool list and <span
-                                            class="formatted">/maptool explore</span>;
-                                </li>
-                                <li><span class="formatted">imageonmap.get</span> for <span
-                                        class="formatted">/maptool get</span>;
-                                </li>
-                                <li><span class="formatted">imageonmap.delete</span> for <span
-                                        class="formatted">/maptool delete</span>;
-                                </li>
-                                <li><span class="formatted">imageonmap.administrative</span> for
-                                    <span class="formatted">/maptool migrate</span>.
-                                </li>
-                            </ul>
-                        </li>
+                        <div class="non-num">
+                            <li><span class="formatted">/imageframe select</span> - Select item frames to put image maps
+                                on
+                            </li>
+                            <li><span class="formatted">/imageframe create &lt;name&gt; &lt;url&gt; &lt;width&gt; &lt;height&gt;</span>
+                                - Create a new image map
+                            </li>
+                            <li><span class="formatted">/imageframe create &lt;name&gt; &lt;url&gt; selection</span> -
+                                Create a new image map and put it directly in your selected item frames
+                            </li>
+                            <li><span class="formatted">/imageframe create &lt;name&gt; &lt;url&gt; &lt;width&gt; &lt;height&gt; combined</span>
+                                - Create a new image map and get its Combined ImageMap item
+                            </li>
+                            <li><span class="formatted">/imageframe overlay &lt;name&gt; &lt;url&gt;</span> - Create a
+                                new image map that adds an overlay on a Minecraft Vanilla map you are holding
+                            </li>
+                            <li><span class="formatted">/imageframe overlay &lt;name&gt; &lt;url&gt; selection</span> -
+                                Create a new image map that adds an overlay on a Minecraft Vanilla map in your selected
+                                item frames
+                            </li>
+                            <li><span class="formatted">/imageframe clone &lt;name&gt; &lt;new_name&gt;</span> - Create
+                                a new image map with the same properties as the old one
+                            </li>
+                            <li><span class="formatted">/imageframe clone &lt;name&gt; &lt;new_name&gt; selection</span>
+                                - Create a new image map with the same properties as the old one and put it directly in
+                                your selected item frames
+                            </li>
+                            <li><span class="formatted">/imageframe clone &lt;name&gt; &lt;new_name&gt; combined</span>
+                                - Create a new image map with the same properties as the old one and get its Combined
+                                ImageMap item
+                            </li>
+                            <li><span class="formatted">/imageframe playback &lt;name&gt; pause</span> - Toggle pause
+                                for an animated image map
+                            </li>
+                            <li><span class="formatted">/imageframe playback &lt;name&gt; jumpto &lt;seconds&gt;</span>
+                                - Jump to a specific second for an animated image map
+                            </li>
+                            <li><span
+                                    class="formatted">/imageframe refresh [optional:image_name] [optional:new_url]</span>
+                                - Refresh a map you've created from source url
+                            </li>
+                            <li><span class="formatted">/imageframe info</span> - Get info related to the image map you
+                                are holding
+                            </li>
+                            <li><span class="formatted">/imageframe get &lt;name&gt;</span> - Get a self-created
+                                pre-existing image map
+                            </li>
+                            <li><span class="formatted">/imageframe get &lt;name&gt; selection</span> - Put a
+                                self-created pre-existing image map directly on your selected item frames
+                            </li>
+                            <li><span class="formatted">/imageframe get &lt;name&gt; combined</span> - Get a
+                                self-created pre-existing image map in its Combined ImageMap form
+                            </li>
+                            <li><span class="formatted">/imageframe delete &lt;name&gt;</span> - Delete a self-created
+                                pre-existing image map
+                            </li>
+                            <li><span class="formatted">/imageframe rename &lt;name&gt; &lt;new_name&gt;</span> - Rename
+                                a self-created pre-existing image map
+                            </li>
+                            <li><span class="formatted">/imageframe list</span> - List all self-created pre-existing
+                                image maps
+                            </li>
+                            <li><span class="formatted">/imageframe marker add &lt;image_name&gt; &lt;marker_name&gt; &lt;direction:0-15&gt; &lt;marker_type&gt; [optional:caption]</span>
+                                - Add a marker to your map
+                            </li>
+                            <li><span
+                                    class="formatted">/imageframe marker remove &lt;image_name&gt; &lt;marker_name&gt;</span>
+                                - Remove a marker from your map
+                            </li>
+                            <li><span class="formatted">/imageframe marker clear &lt;image_name&gt;</span> - Clear all
+                                markers from your map
+                            </li>
+                            <li><span class="formatted">/imageframe setaccess &lt;name&gt; &lt;player&gt; &lt;permission&gt;</span>
+                                - Set access permission of other players for your map
+                            </li>
+                        </div>
                     </ul>
 
-                    <h5>About the permissions</h5>
-                    <p>All permissions are by default granted to everyone, with the exception of
-                        <span class="formatted">imageonmap.administrative</span>.</p>
 
+                    <h4>Videos</h4>
+                    <p>Want video demonstrations? Here are some videos made by some awesome people!</p>
 
                     <a class="main5_admins_description_title"
-                       href="https://www.youtube.com/watch?v=mZ1KdfzdgBE">
-                        English speakers, you can watch this video (thanks to ltjim007)</a>
+                       href="https://www.youtube.com/watch?v=N0PnFbWPD1A">
+                        Video by ServerMiner in English:</a>
                     <div class="video-container  main2_feature_text">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/mZ1KdfzdgBE"
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/N0PnFbWPD1A"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -213,10 +186,10 @@
                     </div>
                     <br>
                     <a class="main5_admins_description_title"
-                       href="https://www.youtube.com/watch?v=qoNat5Tt7FA">
-                        German speakers? Watch this one! (thanks to StarlessMiner)</a>
+                       href="https://www.youtube.com/watch?v=uoppEyy4xow">
+                        Video by KasaiSora in English:</a>
                     <div class="video-container main2_feature_text">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qoNat5Tt7FA"
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/uoppEyy4xow"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -224,7 +197,6 @@
                     </div>
                     <br>
                     <br>
-
                 </div>
             </div>
         </div>
