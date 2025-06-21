@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Разрешить доступ к media/ папке и maintenance.html
+RewriteCond %{REQUEST_URI} !^/media/
+RewriteCond %{REQUEST_URI} !^/maintenance\.html$
+
+# Переадресация всех остальных запросов на maintenance.html
+RewriteRule ^(.*)$ /maintenance.html [R=302,L] 
