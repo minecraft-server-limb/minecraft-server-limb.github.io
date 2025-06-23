@@ -1,8 +1,17 @@
 RewriteEngine On
 
-# Разрешить доступ к media/ папке и maintenance.html
-RewriteCond %{REQUEST_URI} !^/media/
+# Исключения: не перенаправлять саму страницу maintenance.html и папку media
 RewriteCond %{REQUEST_URI} !^/maintenance\.html$
+RewriteCond %{REQUEST_URI} !^/media/
+RewriteCond %{REQUEST_FILENAME} !-f
 
-# Переадресация всех остальных запросов на maintenance.html
-RewriteRule ^(.*)$ /maintenance.html [R=302,L] 
+# Перенаправление всех остальных запросов
+RewriteRule ^.*$ maintenance.html [R=302,L]
+
+# Альтернативный вариант для старых серверов
+# Redirect 302 /index.html /maintenance.html
+# Redirect 302 /core-protect.html /maintenance.html
+# Redirect 302 /image-on-map.html /maintenance.html
+# Redirect 302 /random-item-giver-datapack.html /maintenance.html
+# Redirect 302 /voidgen.html /maintenance.html
+# Redirect 302 /minepacks.html /maintenance.html 
